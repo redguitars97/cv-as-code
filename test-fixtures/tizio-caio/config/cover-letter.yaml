@@ -1,0 +1,20 @@
+coverLetter:
+  generic:
+    subject:
+      it: "Candidatura per il ruolo di Senior Data Engineer"
+      en: "Application for the Senior Data Engineer role"
+    opening:
+      it: "Le scrivo per presentare una candidatura demo per ruoli data engineering."
+      en: "I am writing to present a demo application for data engineering roles."
+    professionalValue:
+      it: "L'esperienza riguarda piattaforme dati cloud, pipeline affidabili e qualità del dato."
+      en: "The experience covers cloud data platforms, reliable pipelines and data quality."
+    concreteExperience:
+      it: "Il profilo unisce implementazione tecnica, collaborazione con stakeholder e attenzione alla governance."
+      en: "The profile combines technical implementation, stakeholder collaboration and governance awareness."
+    motivation:
+      it: "Il candidato demo è interessato a contesti data-driven maturi."
+      en: "The demo candidate is interested in mature data-driven environments."
+    closing:
+      it: "Resto a disposizione per un colloquio."
+      en: "I would welcome the opportunity to discuss the role."

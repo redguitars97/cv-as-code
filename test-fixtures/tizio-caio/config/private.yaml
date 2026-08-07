@@ -1,0 +1,11 @@
+contact:
+  email: "tizio.caio@not-a-real-domain.invalid"
+  phone: "+39 111 222 3333"
+  linkedin: "https://www.linkedin.com/in/tizio-caio"
+  github: "https://github.com/tizio-caio"
+photo:
+  path: ""
+signature:
+  enabled: true
+  name: ""
+  imagePath: ""

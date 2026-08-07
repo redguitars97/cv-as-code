@@ -1,0 +1,12 @@
+candidate:
+  firstName: "Tizio"
+  lastName: "Caio"
+  location:
+    it: "Milano, Italia"
+    en: "Milan, Italy"
+  professionalTitle:
+    it: "Senior Data Engineer"
+    en: "Senior Data Engineer"
+  positioning:
+    it: "Data platform | Pipeline batch e streaming | Qualità del dato"
+    en: "Data platforms | Batch and streaming pipelines | Data quality"

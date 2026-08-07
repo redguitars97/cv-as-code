@@ -1,0 +1,197 @@
+resume:
+  summary:
+    it: >
+      Senior Data Engineer con esperienza nella costruzione di piattaforme dati cloud, pipeline batch e streaming,
+      modellazione analitica e governance operativa. Lavora con Python, SQL, Spark, Airflow e data warehouse moderni,
+      mantenendo attenzione a qualità del dato, affidabilità e collaborazione con stakeholder business.
+    en: >
+      Senior Data Engineer experienced in building cloud data platforms, batch and streaming pipelines,
+      analytical models and operational governance. Works with Python, SQL, Spark, Airflow and modern data warehouses,
+      with strong attention to data quality, reliability and collaboration with business stakeholders.
+  expertise:
+    - category:
+        it: "Data Engineering"
+        en: "Data Engineering"
+      items: ["Python", "SQL", "Apache Spark", "Airflow", "dbt", "Kafka", "ETL", "ELT"]
+    - category:
+        it: "Cloud Data Platform"
+        en: "Cloud Data Platform"
+      items: ["GCP", "BigQuery", "Snowflake", "Databricks", "Terraform", "Docker"]
+    - category:
+        it: "Qualità e governance"
+        en: "Quality and Governance"
+      items: ["Data quality", "Lineage", "Observability", "Data contracts", "Monitoring"]
+  experiences:
+    - id: "northwind"
+      company: "Northwind Analytics"
+      role:
+        it: "Senior Data Engineer"
+        en: "Senior Data Engineer"
+      startDate: "2022-03"
+      endDate:
+      location:
+        it: "Milano, Italia"
+        en: "Milan, Italy"
+      context:
+        it: "Piattaforma dati cloud per reporting operativo e analytics self-service."
+        en: "Cloud data platform for operational reporting and self-service analytics."
+      highlights:
+        - it: "Progettazione di pipeline dati batch e streaming con Python, Spark, Airflow e Kafka."
+          en: "Designed batch and streaming data pipelines with Python, Spark, Airflow and Kafka."
+        - it: "Introduzione di controlli di qualità, monitoraggio e alerting sui flussi critici."
+          en: "Introduced quality checks, monitoring and alerting on critical data flows."
+        - it: "Collaborazione con stakeholder business per definire contratti dati e dataset affidabili."
+          en: "Worked with business stakeholders to define data contracts and reliable datasets."
+        - it: "Documentazione dei lineage principali e supporto alle decisioni su data ownership e incident response."
+          en: "Documented key lineage flows and supported decisions on data ownership and incident response."
+      projects:
+        - name: "Customer Data Platform"
+          domain:
+            it: "Retail analytics"
+            en: "Retail analytics"
+          label:
+            it: "Progetto principale"
+            en: "Main project"
+          description:
+            it: "Integrazione di sorgenti transazionali e comportamentali per dataset customer-ready."
+            en: "Integration of transactional and behavioral sources for customer-ready datasets."
+          highlights:
+            - it: "Coordinamento tecnico dei flussi di ingestion, normalizzazione e controlli di qualità."
+              en: "Technical coordination of ingestion, normalization and quality-control flows."
+            - it: "Supporto a dashboard operative e modelli analitici alimentati da dataset certificati."
+              en: "Supported operational dashboards and analytical models based on certified datasets."
+          technologies: ["Python", "Spark", "Kafka", "BigQuery", "Airflow", "dbt"]
+        - name: "Data Reliability"
+          domain:
+            it: "Platform operations"
+            en: "Platform operations"
+          label:
+            it: "Progetto secondario"
+            en: "Secondary project"
+          description:
+            it: "Monitoraggio di freschezza, completezza e coerenza dei dataset critici."
+            en: "Monitoring of freshness, completeness and consistency for critical datasets."
+          highlights:
+            - it: "Definizione di controlli automatici e soglie di alert per pipeline business-critical."
+              en: "Defined automated checks and alert thresholds for business-critical pipelines."
+          technologies: ["Data quality", "Monitoring", "SQL", "Airflow"]
+      technologies: ["Python", "SQL", "Apache Spark", "Airflow", "Kafka", "BigQuery", "dbt"]
+    - id: "contoso"
+      company: "Contoso Retail"
+      role:
+        it: "Data Engineer"
+        en: "Data Engineer"
+      startDate: "2020-01"
+      endDate: "2022-02"
+      location:
+        it: "Torino, Italia"
+        en: "Turin, Italy"
+      context:
+        it: "Modernizzazione di flussi dati retail per analytics commerciale e inventory."
+        en: "Modernization of retail data flows for commercial analytics and inventory."
+      highlights:
+        - it: "Sviluppo di modelli ELT con dbt e Snowflake per domini vendite, catalogo e stock."
+          en: "Built ELT models with dbt and Snowflake for sales, catalog and stock domains."
+        - it: "Automazione di controlli su completezza, freschezza e coerenza dei dati."
+          en: "Automated checks on data completeness, freshness and consistency."
+        - it: "Riorganizzazione delle dipendenze tra job per rendere più chiara la manutenzione dei flussi."
+          en: "Reorganized job dependencies to make data flow maintenance clearer."
+      projects:
+        - name: "Inventory Analytics"
+          domain:
+            it: "Supply chain"
+            en: "Supply chain"
+          label:
+            it: "Progetto principale"
+            en: "Main project"
+          description:
+            it: "Dataset analitici per stock, disponibilità e reportistica commerciale."
+            en: "Analytical datasets for stock, availability and commercial reporting."
+          highlights:
+            - it: "Pulizia delle trasformazioni legacy e introduzione di modelli più leggibili per il team."
+              en: "Cleaned legacy transformations and introduced more readable models for the team."
+          technologies: ["Snowflake", "dbt", "SQL", "Airflow"]
+      technologies: ["SQL", "Snowflake", "dbt", "Airflow", "Docker"]
+    - id: "fabrikam"
+      company: "Fabrikam Energy"
+      role:
+        it: "BI Developer"
+        en: "BI Developer"
+      startDate: "2018-06"
+      endDate: "2019-12"
+      location:
+        it: "Roma, Italia"
+        en: "Rome, Italy"
+      context:
+        it: "Reporting direzionale e integrazione dati per operations energy."
+        en: "Executive reporting and data integration for energy operations."
+      highlights:
+        - it: "Realizzazione di dashboard e dataset certificati per monitoraggio operativo."
+          en: "Built dashboards and certified datasets for operational monitoring."
+        - it: "Supporto alla standardizzazione delle metriche condivise tra operation e controllo di gestione."
+          en: "Supported metric standardization across operations and management control."
+      technologies: ["SQL", "Power BI", "PostgreSQL"]
+    - id: "adventure-works"
+      company: "Adventure Works Labs"
+      role:
+        it: "Junior Data Analyst"
+        en: "Junior Data Analyst"
+      startDate: "2017-09"
+      endDate: "2018-05"
+      location:
+        it: "Bologna, Italia"
+        en: "Bologna, Italy"
+      context:
+        it: "Esperienza iniziale su analisi dati, reporting e supporto operativo."
+        en: "Early experience in data analysis, reporting and operational support."
+      highlights:
+        - it: "Preparazione di report periodici, riconciliazione dataset e analisi descrittive per team interni."
+          en: "Prepared recurring reports, reconciled datasets and delivered descriptive analysis for internal teams."
+        - it: "Collaborazione con utenti business per chiarire definizioni, anomalie e priorità informative."
+          en: "Collaborated with business users to clarify definitions, anomalies and information priorities."
+      technologies: ["SQL", "Excel", "Tableau"]
+  certifications:
+    - name: "Google Professional Data Engineer"
+      issuer: "Google Cloud"
+      date: "2023/05"
+    - name: "Databricks Lakehouse Fundamentals"
+      issuer: "Databricks"
+      date: "2022/11"
+    - name: "SnowPro Core"
+      issuer: "Snowflake"
+      date: "2021/09"
+  education:
+    - title:
+        it: "Laurea in Informatica"
+        en: "Computer Science Degree"
+      institution: "Università degli Studi di Milano"
+      startDate: "2014"
+      endDate: "2018"
+      details: "Demo fixture"
+  languages:
+    - name:
+        it: "Italiano"
+        en: "Italian"
+      level:
+        it: "madrelingua"
+        en: "native"
+    - name:
+        it: "Inglese"
+        en: "English"
+      level:
+        it: "C1"
+        en: "C1"
+    - name:
+        it: "Francese"
+        en: "French"
+      level:
+        it: "B1"
+        en: "B1"
+  selectedProjectsTitle:
+    it: "Progetti selezionati"
+    en: "Selected Projects"
+  selectedProjects: []
+  additionalTrainingTitle:
+    it: "Formazione continua"
+    en: "Continuous Learning"
+  additionalTraining: []

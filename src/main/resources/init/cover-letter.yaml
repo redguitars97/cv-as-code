@@ -1,0 +1,20 @@
+coverLetter:
+  generic:
+    subject:
+      it: "Candidatura per il ruolo di Senior Data Engineer"
+      en: "Application for the Senior Data Engineer role"
+    opening:
+      it: "Le scrivo per presentare la mia candidatura per opportunità data engineering."
+      en: "I am writing to apply for data engineering opportunities."
+    professionalValue:
+      it: "Ho esperienza su pipeline dati, piattaforme cloud, qualità del dato e collaborazione con stakeholder."
+      en: "I have experience with data pipelines, cloud platforms, data quality and stakeholder collaboration."
+    concreteExperience:
+      it: "Lavoro con un approccio pragmatico: requisiti chiari, soluzioni manutenibili e controlli automatici."
+      en: "I work with a pragmatic approach: clear requirements, maintainable solutions and automated checks."
+    motivation:
+      it: "Cerco contesti in cui contribuire a prodotti data-driven affidabili."
+      en: "I am looking for environments where I can contribute to reliable data-driven products."
+    closing:
+      it: "Resto a disposizione per un colloquio."
+      en: "I would welcome the opportunity to discuss the role."

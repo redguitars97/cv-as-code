@@ -1,0 +1,72 @@
+<!doctype html>
+<html th:lang="${languageTag}" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${candidate.personal.firstName + ' ' + candidate.personal.lastName + ' - ' + labels.document.coverLetterTitle}">Cover Letter</title>
+  <style th:utext="${css}"></style>
+  <style th:utext="${':root { --color-primary: ' + settings.theme.accentColor + '; }'}"></style>
+</head>
+<body>
+<main class="page letter">
+  <div class="demo-banner" th:if="${generationMode == 'DEMO'}" th:text="${labels.labels.demo}">Demo document</div>
+  <header class="letterhead">
+    <div>
+      <p class="eyebrow" th:text="${labels.document.coverLetterTitle}">Cover Letter</p>
+      <h1 th:text="${candidate.personal.firstName + ' ' + candidate.personal.lastName}">Candidate Name</h1>
+      <p class="title" th:text="${candidate.personal.professionalTitle}">Professional Title</p>
+    </div>
+    <address>
+      <span th:text="${candidate.personal.location}">Location</span>
+      <a th:href="${'mailto:' + private.contact.email}" th:text="${private.contact.email}">email</a>
+      <a th:href="${'tel:' + #strings.replace(private.contact.phone, ' ', '')}"
+         th:text="${#strings.replace(private.contact.phone, '+39', '0039')}">phone</a>
+      <a th:href="${private.contact.linkedin}">LinkedIn</a>
+      <a th:href="${private.contact.github}">GitHub</a>
+    </address>
+  </header>
+
+  <section class="recipient">
+    <p th:text="${today}">date</p>
+    <p th:if="${application.company != null and application.company != ''}" th:text="${application.company}">Company</p>
+    <p th:if="${application.recipient != null and application.recipient != ''}" th:text="${application.recipient}">Hiring Team</p>
+  </section>
+
+  <p class="subject">
+    <strong th:text="${labels.cover.subject + ': '}">Subject:</strong>
+    <span th:text="${application.role != null and application.role != '' ? application.role : cover.subject}">Application</span>
+  </p>
+
+  <p th:if="${application.recipient != null and application.recipient != ''}"
+     th:text="${labels.cover.greeting + ' ' + application.recipient + ','}">Dear Hiring Team,</p>
+  <p th:unless="${application.recipient != null and application.recipient != ''}"
+     th:text="${labels.cover.genericGreeting}">Dear Hiring Team,</p>
+
+  <p th:text="${cover.opening}">Opening</p>
+  <p th:text="${cover.professionalValue}">Professional value</p>
+  <p th:text="${cover.concreteExperience}">Concrete experience</p>
+
+  <p th:if="${application.companyReason != null and application.companyReason != ''}">
+    <span th:text="${languageTag == 'it' ? 'Questa opportunita mi interessa per ' : 'This opportunity interests me because of '}">Reason</span>
+    <span th:text="${application.companyReason}">company reason</span>
+    <span th:if="${application.roleReason != null and application.roleReason != ''}" th:text="${languageTag == 'it' ? ' e per ' : ' and for '}">and</span>
+    <span th:if="${application.roleReason != null and application.roleReason != ''}" th:text="${application.roleReason}">role reason</span>
+    <span>.</span>
+  </p>
+  <p th:unless="${application.companyReason != null and application.companyReason != ''}" th:text="${cover.motivation}">Motivation</p>
+
+  <p th:if="${application.matchingPoints != null and !application.matchingPoints.isEmpty()}">
+    <span th:text="${languageTag == 'it' ? 'In particolare, porto ' : 'In particular, I bring '}">Intro</span>
+    <span th:each="point, stat : ${application.matchingPoints}" th:text="${point + (stat.last ? '.' : ', ')}">point</span>
+  </p>
+
+  <p th:text="${cover.closing}">Closing</p>
+  <p class="closing" th:text="${labels.cover.closing}">Sincerely,</p>
+  <div class="document-signature" th:if="${signature.enabled == true}">
+    <img th:if="${signature.imageUri != null and signature.imageUri != ''}"
+         th:src="${signature.imageUri}"
+         th:alt="${signature.name}">
+    <p class="signature" th:text="${signature.name}">Candidate Name</p>
+  </div>
+</main>
+</body>
+</html>

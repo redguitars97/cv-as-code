@@ -1,0 +1,37 @@
+document:
+  resume:
+    maxPages: 2
+    includePhoto:
+      it: true
+      en: false
+  coverLetter:
+    maxPages: 1
+    defaultMode: generic
+privacy:
+  enabled:
+    it: true
+    en: false
+  text:
+    it: "Autorizzo il trattamento dei dati personali contenuti nel presente curriculum per finalità di selezione del personale e recruiting, nel rispetto del Regolamento (UE) 2016/679 (GDPR) e della normativa italiana vigente in materia di protezione dei dati personali."
+    en: "I authorize the processing of the personal data contained in this CV for personnel selection and recruiting purposes, in compliance with Regulation (EU) 2016/679 (GDPR) and current Italian legislation on the protection of personal data."
+theme:
+  accentColor: "#164E63"
+output:
+  fileNamePattern: "{firstName}_{lastName}_{documentType}_{language}"
+sections:
+  summary:
+    enabled: true
+  expertise:
+    enabled: true
+  experience:
+    enabled: true
+  selectedProjects:
+    enabled: false
+  certifications:
+    enabled: true
+  education:
+    enabled: true
+  languages:
+    enabled: true
+  additionalTraining:
+    enabled: false

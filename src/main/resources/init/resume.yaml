@@ -1,0 +1,85 @@
+resume:
+  summary:
+    it: "Senior Data Engineer con esperienza su piattaforme dati cloud, pipeline batch e streaming, qualità del dato e collaborazione con stakeholder business."
+    en: "Senior Data Engineer experienced in cloud data platforms, batch and streaming pipelines, data quality and collaboration with business stakeholders."
+  expertise:
+    - category:
+        it: "Data Engineering"
+        en: "Data Engineering"
+      items: ["Python", "SQL", "Apache Spark", "Airflow", "Kafka", "dbt"]
+    - category:
+        it: "Cloud Data Platform"
+        en: "Cloud Data Platform"
+      items: ["GCP", "BigQuery", "Snowflake", "Databricks", "Docker"]
+  experiences:
+    - id: "current-company"
+      company: "Example Analytics"
+      role:
+        it: "Senior Data Engineer"
+        en: "Senior Data Engineer"
+      startDate: "2022-03"
+      endDate:
+      location:
+        it: "Milano, Italia"
+        en: "Milan, Italy"
+      context:
+        it: "Piattaforma dati cloud per reporting e analytics."
+        en: "Cloud data platform for reporting and analytics."
+      highlights:
+        - it: "Progettazione di pipeline dati batch e streaming."
+          en: "Designed batch and streaming data pipelines."
+        - it: "Introduzione di controlli di qualità e monitoraggio."
+          en: "Introduced data quality checks and monitoring."
+      projects: []
+      technologies: ["Python", "SQL", "Apache Spark", "Airflow", "Kafka"]
+    - id: "previous-company"
+      company: "Example Retail"
+      role:
+        it: "Data Engineer"
+        en: "Data Engineer"
+      startDate: "2020-01"
+      endDate: "2022-02"
+      location:
+        it: "Torino, Italia"
+        en: "Turin, Italy"
+      context:
+        it: "Modernizzazione di flussi dati retail."
+        en: "Retail data flow modernization."
+      highlights:
+        - it: "Sviluppo di modelli ELT e dashboard operative."
+          en: "Built ELT models and operational dashboards."
+      projects: []
+      technologies: ["SQL", "Snowflake", "dbt", "Docker"]
+  certifications:
+    - name: "Example Cloud Certification"
+      issuer: "Example Provider"
+      date: "2023-05"
+  education:
+    - title:
+        it: "Laurea in Informatica"
+        en: "Computer Science Degree"
+      institution: "Example University"
+      startDate: "2014"
+      endDate: "2018"
+      details: ""
+  languages:
+    - name:
+        it: "Italiano"
+        en: "Italian"
+      level:
+        it: "madrelingua"
+        en: "native"
+    - name:
+        it: "Inglese"
+        en: "English"
+      level:
+        it: "C1"
+        en: "C1"
+  selectedProjectsTitle:
+    it: "Progetti selezionati"
+    en: "Selected Projects"
+  selectedProjects: []
+  additionalTrainingTitle:
+    it: "Formazione continua"
+    en: "Continuous Learning"
+  additionalTraining: []

@@ -1,0 +1,223 @@
+<!doctype html>
+<html th:lang="${languageTag}" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${candidate.personal.firstName + ' ' + candidate.personal.lastName + ' - ' + candidate.personal.professionalTitle}">CV</title>
+  <style th:utext="${css}"></style>
+  <style th:utext="${':root { --color-accent: ' + settings.theme.accentColor + '; }'}"></style>
+</head>
+<body>
+<main th:class="${'resume ' + (includePhoto and photoUri != '' ? 'with-photo' : 'no-photo')}">
+  <div class="demo-banner" th:if="${generationMode == 'DEMO'}" th:text="${labels.labels.demo}">Demo document</div>
+
+  <header class="resume-header keep-header-with-content">
+    <div class="identity-block">
+      <h1 th:text="${candidate.personal.firstName + ' ' + candidate.personal.lastName}">Candidate Name</h1>
+      <p class="professional-title" th:text="${candidate.personal.professionalTitle}">Professional Title</p>
+      <p class="positioning"
+         th:if="${candidate.personal.positioning != null and candidate.personal.positioning != ''}"
+         th:text="${candidate.personal.positioning}">Enterprise backend | Microservices</p>
+      <address class="contact-line">
+        <span class="contact-item contact-location"
+              th:if="${candidate.personal.location != null and candidate.personal.location != ''}"
+              th:text="${candidate.personal.location}">Location</span>
+        <span class="contact-item contact-email"
+              th:if="${private.contact.email != null and private.contact.email != ''}">
+          <a th:href="${'mailto:' + private.contact.email}" th:text="${private.contact.email}">email</a>
+        </span>
+        <span class="contact-item contact-phone"
+              th:if="${private.contact.phone != null and private.contact.phone != ''}">
+          <a th:href="${'tel:' + #strings.replace(private.contact.phone, ' ', '')}"
+             th:text="${#strings.replace(private.contact.phone, '+39', '0039')}">phone</a>
+        </span>
+        <span class="contact-item contact-link"
+              th:if="${private.contact.linkedin != null and private.contact.linkedin != ''}">
+          <a th:href="${private.contact.linkedin}">LinkedIn</a>
+        </span>
+        <span class="contact-item contact-link"
+              th:if="${private.contact.github != null and private.contact.github != ''}">
+          <a th:href="${private.contact.github}">GitHub</a>
+        </span>
+      </address>
+    </div>
+    <figure class="photo-frame" th:if="${includePhoto and photoUri != ''}">
+      <img th:src="${photoUri}" th:alt="${candidate.personal.firstName + ' ' + candidate.personal.lastName}">
+    </figure>
+  </header>
+
+  <section class="section summary-section avoid-orphan" th:if="${settings.sections.summary.enabled}">
+    <h2 th:text="${labels.sections.summary}">Professional Profile</h2>
+    <p th:text="${resume.summary}">Summary</p>
+  </section>
+
+  <section class="section skills-section avoid-orphan"
+           th:if="${settings.sections.expertise.enabled and resume.skills != null and !resume.skills.isEmpty()}">
+    <h2 th:text="${labels.sections.expertise}">Core Expertise</h2>
+    <div th:class="${'skills-grid ' + (resume.skills.size() > 4 ? 'skills-grid-long' : '')}">
+      <div class="skill-row" th:each="skillGroup : ${resume.skills}">
+        <p class="skill-label" th:text="${skillGroup.category}">Backend Engineering</p>
+        <p class="skill-text">
+          <span th:each="skill, stat : ${skillGroup.items}" th:text="${skill + (stat.last ? '' : ', ')}">Java</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section experience-section"
+           th:if="${settings.sections.experience.enabled and resume.experience != null and !resume.experience.isEmpty()}">
+    <h2 th:text="${labels.sections.experience}">Professional Experience</h2>
+    <article th:each="experience, expStat : ${resume.experience}"
+             th:class="${'experience '
+               + (experience.displayMode == 'compact' ? 'experience-compact ' : '')
+               + (experience.pagination != null and experience.pagination.allowSplit == true ? 'experience-splittable ' : '')}">
+      <header class="experience-header keep-header-with-content">
+        <div>
+          <h3 class="company" th:text="${experience.company}">Company</h3>
+          <p class="role" th:text="${experience.role}">Role</p>
+        </div>
+        <p class="period-location">
+          <span th:text="${experience.period}">Period</span>
+          <span th:if="${experience.location != null and experience.location != ''}" th:text="${' | ' + experience.location}">Location</span>
+        </p>
+      </header>
+
+      <p class="context" th:if="${experience.context != null and experience.context != ''}" th:text="${experience.context}">Context</p>
+
+      <ul class="highlights" th:if="${experience.highlights != null and !experience.highlights.isEmpty()}">
+        <li th:each="bullet : ${experience.highlights}" th:text="${bullet}">Bullet</li>
+      </ul>
+
+      <div class="projects" th:if="${experience.projects != null and !experience.projects.isEmpty()}">
+        <article class="project project-featured keep-project-together"
+                 th:each="project, projectStat : ${experience.projects}"
+                 th:if="${projectStat.first}">
+          <p class="project-label" th:text="${project.label != null and project.label != '' ? project.label : labels.sections.projects}">Project</p>
+          <h4 class="project-name" th:text="${project.name}">Project name</h4>
+          <p class="project-domain" th:if="${project.domain != null and project.domain != ''}" th:text="${project.domain}">Domain</p>
+          <p class="project-context" th:if="${project.description != null and project.description != ''}" th:text="${project.description}">Description</p>
+          <ul class="project-highlights" th:if="${project.highlights != null and !project.highlights.isEmpty()}">
+            <li th:each="bullet : ${project.highlights}" th:text="${bullet}">Project bullet</li>
+          </ul>
+          <p class="technology-list technology-list-featured" th:if="${project.technologies != null and !project.technologies.isEmpty()}">
+            <span th:each="technology : ${project.technologies}" th:text="${technology}">Java</span>
+          </p>
+        </article>
+
+        <section class="secondary-projects" th:if="${experience.projects.size() > 1}">
+          <h4 th:text="${labels.sections.projects + ' ' + experience.company}">Company projects</h4>
+          <article class="project project-compact"
+                   th:each="project, projectStat : ${experience.projects}"
+                   th:if="${!projectStat.first}">
+            <div class="project-identity">
+              <p class="project-name" th:text="${project.name}">Project name</p>
+              <p class="project-domain" th:if="${project.domain != null and project.domain != ''}" th:text="${project.domain}">Domain</p>
+            </div>
+            <div class="project-summary">
+              <p class="project-context" th:if="${project.description != null and project.description != ''}" th:text="${project.description}">Description</p>
+              <p class="technology-inline" th:if="${project.technologies != null and !project.technologies.isEmpty()}">
+                <span th:each="technology, techStat : ${project.technologies}" th:text="${technology + (techStat.last ? '' : ' | ')}">Java</span>
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <p class="technology-list"
+         th:if="${experience.technologies != null and !experience.technologies.isEmpty() and (experience.projects == null or experience.projects.isEmpty())}">
+        <span th:each="technology : ${experience.technologies}" th:text="${technology}">Java</span>
+      </p>
+    </article>
+  </section>
+
+  <section class="section selected-projects-section"
+           th:if="${settings.sections.selectedProjects.enabled and resume.selectedProjects != null and !resume.selectedProjects.isEmpty()}">
+    <h2 th:text="${resume.selectedProjectsTitle != null and resume.selectedProjectsTitle != '' ? resume.selectedProjectsTitle : labels.sections.projects}">Selected Projects</h2>
+    <div class="secondary-projects selected-projects-list">
+      <article class="project project-compact"
+               th:each="project : ${resume.selectedProjects}"
+               th:if="${project.visible == null or project.visible == true}">
+        <div class="project-identity">
+          <p class="project-name" th:text="${project.name}">Project name</p>
+          <p class="project-domain"
+             th:if="${project.role != null and project.role != ''}"
+             th:text="${project.role}">Role</p>
+        </div>
+        <div class="project-summary">
+          <p class="project-context" th:if="${project.description != null and project.description != ''}" th:text="${project.description}">Description</p>
+          <p class="technology-inline" th:if="${project.technologies != null and !project.technologies.isEmpty()}">
+            <span th:each="technology, techStat : ${project.technologies}" th:text="${technology + (techStat.last ? '' : ' | ')}">Java</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section credentials-section" aria-label="Credentials"
+           th:if="${(settings.sections.certifications.enabled and resume.certifications != null and !resume.certifications.isEmpty())
+             or (settings.sections.education.enabled and resume.education != null and !resume.education.isEmpty())
+             or (settings.sections.additionalTraining.enabled and resume.additionalTraining != null and !resume.additionalTraining.isEmpty())
+             or (settings.sections.languages.enabled and resume.languages != null and !resume.languages.isEmpty())}">
+    <div class="credentials-grid">
+      <section class="credential-group"
+               th:if="${settings.sections.certifications.enabled and resume.certifications != null and !resume.certifications.isEmpty()}">
+        <h2 th:text="${labels.sections.certifications}">Certifications</h2>
+        <ul>
+          <li th:each="certification : ${resume.certifications}">
+            <strong th:text="${certification.name}">Certification</strong>
+            <span th:if="${certification.issuer != null and certification.issuer != ''}" th:text="${certification.issuer}">Issuer</span>
+            <span th:if="${certification.date != null and certification.date != ''}" th:text="${certification.date}">Date</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="credential-group"
+               th:if="${settings.sections.education.enabled and resume.education != null and !resume.education.isEmpty()}">
+        <h2 th:text="${labels.sections.education}">Education</h2>
+        <ul>
+          <li th:each="item : ${resume.education}">
+            <strong th:text="${item.title}">Diploma</strong>
+            <span th:text="${item.institution}">Institution</span>
+            <span th:text="${item.startDate + (item.endDate != null and item.endDate != '' ? ' / ' + item.endDate : '')}">Period</span>
+            <span th:if="${item.details != null and item.details != ''}" th:text="${item.details}">Details</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="credential-group"
+               th:if="${settings.sections.additionalTraining.enabled and resume.additionalTraining != null and !resume.additionalTraining.isEmpty()}">
+        <h2 th:text="${resume.additionalTrainingTitle != null and resume.additionalTrainingTitle != '' ? resume.additionalTrainingTitle : labels.sections.additionalTraining}">Additional Training</h2>
+        <ul>
+          <li th:each="course : ${resume.additionalTraining}" th:if="${course.visibleByDefault == true}">
+            <strong th:text="${course.name}">Course</strong>
+            <span th:if="${course.issuer != null and course.issuer != ''}" th:text="${course.issuer}">Issuer</span>
+            <span th:if="${course.date != null and course.date != ''}" th:text="${course.date}">Date</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="credential-group"
+               th:if="${settings.sections.languages.enabled and resume.languages != null and !resume.languages.isEmpty()}">
+        <h2 th:text="${labels.sections.languages}">Languages</h2>
+        <ul>
+          <li th:each="lang : ${resume.languages}">
+            <strong th:text="${lang.name}">Language</strong>
+            <span th:text="${lang.level}">Level</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <footer class="resume-footer"
+          th:if="${(signature.enabled == true) or (privacy.enabled == true)}">
+    <div class="document-signature" th:if="${signature.enabled == true}">
+      <img th:if="${signature.imageUri != null and signature.imageUri != ''}"
+           th:src="${signature.imageUri}"
+           th:alt="${signature.name}">
+      <p th:text="${signature.name}">Candidate Name</p>
+    </div>
+    <p class="privacy-note" th:if="${privacy.enabled == true}" th:text="${privacy.text}">Privacy note</p>
+  </footer>
+</main>
+</body>
+</html>

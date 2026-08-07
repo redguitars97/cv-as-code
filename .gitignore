@@ -1,0 +1,12 @@
+target/
+output/
+demo-output/
+config/private.yaml
+assets/private/
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.iml
+ms-playwright/
+playwright-report/

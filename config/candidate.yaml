@@ -1,0 +1,12 @@
+candidate:
+  firstName: "Mattia"
+  lastName: "Cozzolino"
+  location:
+    it: "Napoli, Italia"
+    en: "Naples, Italy"
+  professionalTitle:
+    it: "Senior Software Engineer"
+    en: "Senior Software Engineer"
+  positioning:
+    it: "Enterprise Backend | Java | Microservizi | Cloud | Developer Experience"
+    en: "Enterprise Backend | Java | Microservices | Cloud | Developer Experience"

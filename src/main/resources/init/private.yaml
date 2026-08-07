@@ -1,0 +1,11 @@
+contact:
+  email: "name.surname@example.com"
+  phone: "+39 000 000 0000"
+  linkedin: "https://www.linkedin.com/in/example"
+  github: "https://github.com/example"
+photo:
+  path: ""
+signature:
+  enabled: true
+  name: ""
+  imagePath: ""

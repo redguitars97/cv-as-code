@@ -1,0 +1,22 @@
+application:
+  id: "example-company"
+  company: "Example Company"
+  role:
+    it: "Senior Data Engineer"
+    en: "Senior Data Engineer"
+  recipient:
+    it: "Team di selezione"
+    en: "Hiring Team"
+  applicationDate: "2026-08-05"
+motivation:
+  companyReason:
+    it: "la centralità dei dati nel prodotto"
+    en: "its data-centric product direction"
+  roleReason:
+    it: "l'allineamento con pipeline cloud e qualità del dato"
+    en: "the alignment with cloud pipelines and data quality"
+  matchingPoints:
+    - it: "pipeline batch e streaming"
+      en: "batch and streaming pipelines"
+    - it: "data quality e governance"
+      en: "data quality and governance"

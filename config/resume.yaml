@@ -1,0 +1,214 @@
+resume:
+  summary:
+    it: >
+      Senior Software Engineer con circa 8 anni di esperienza su sistemi enterprise in ambito sanitario, farmaceutico,
+      aerospaziale ed energetico. Segue il ciclo dall'analisi dei requisiti alla progettazione, delivery e troubleshooting
+      in produzione, con ownership su aree backend Java, microservizi, integrazioni e cloud delivery. Contribuisce a decisioni
+      architetturali, qualità del software, mentoring tecnico e scelte pragmatiche orientate al prodotto.
+    en: >
+      Senior Software Engineer with around 8 years of experience on enterprise systems in healthcare, pharmaceutical,
+      aerospace and energy domains. Works from requirements analysis to design, delivery and production troubleshooting,
+      with ownership of Java backend areas, microservices, integrations and cloud delivery. Contributes to architectural
+      decisions, software quality, technical mentoring and pragmatic product-oriented choices.
+
+  expertise:
+    - category:
+        it: "Backend Engineering"
+        en: "Backend Engineering"
+      items: ["Java 8/11/17/21", "Spring Boot", "Spring MVC", "Spring Data", "Spring WebFlux", "JPA/Hibernate", "REST API"]
+    - category:
+        it: "Architetture e integrazioni"
+        en: "Architecture and Integration"
+      items: ["Microservices", "Event-driven systems", "Kafka", "Server-Sent Events", "Inbox/Outbox", "Claim Check", "BFF"]
+    - category:
+        it: "Cloud e DevOps"
+        en: "Cloud and DevOps"
+      items: ["Azure", "AWS", "Docker", "Kubernetes", "GitLab CI/CD", "Azure DevOps", "Maven", "Gradle"]
+    - category:
+        it: "Dati, testing e osservabilità"
+        en: "Data, Testing and Observability"
+      items: ["PostgreSQL", "Oracle", "MongoDB", "Redis", "ELK", "JUnit", "Cucumber", "Selenium"]
+  experiences:
+    - id: "itsvil"
+      company: "ITSvil S.r.l."
+      role:
+        it: "Senior Software Engineer"
+        en: "Senior Software Engineer"
+      startDate: "2024-01"
+      endDate:
+      location:
+        it: "Salerno, Italia"
+        en: "Salerno, Italy"
+      context:
+        it: "Healthcare enterprise per ASL e DXC Technology su Regione Campania, evoluta verso Piani Terapeutici e interoperabilità FHIR R4."
+        en: "Enterprise healthcare for ASL and DXC Technology on Regione Campania platforms, evolved toward Therapeutic Plans and FHIR R4 interoperability."
+      highlights:
+        - it: "Ownership di funzionalità backend Java/Spring per piattaforme sanitarie enterprise, integrando domini clinici, PostgreSQL, BFF e interoperabilità FHIR R4."
+          en: "Owned Java/Spring backend features for enterprise healthcare platforms, integrating clinical domains, PostgreSQL, BFF services and FHIR R4 interoperability."
+        - it: "Contributo ad analisi requisiti, decisioni architetturali Ports/Adapters, librerie condivise, mentoring, CI/CD e troubleshooting con trace ID/ELK."
+          en: "Contributed to requirements analysis, Ports/Adapters architectural decisions, shared libraries, mentoring, CI/CD and troubleshooting with trace IDs/ELK."
+      technologies: ["Java", "Spring Boot", "PostgreSQL", "BFF", "GitLab CI/CD", "Docker", "Kubernetes", "ELK", "FHIR R4"]
+
+    - id: "capgemini"
+      company: "Capgemini Engineering"
+      pagination:
+        allowSplit: true
+      role:
+        it: "Consultant / Engineer"
+        en: "Consultant / Engineer"
+      startDate: "2021-06"
+      endDate: "2024-01"
+      location:
+        it: "Napoli, Italia"
+        en: "Naples, Italy"
+      context:
+        it: "Consulenza enterprise su sviluppo full stack, test architecture, test automation e pre-sales."
+        en: "Enterprise consulting across full stack development, test architecture, test automation and pre-sales."
+      highlights:
+        - it: "Contributo a delivery applicativa, test strategy, test automation, colloqui tecnici e pre-sales."
+          en: "Contributed to application delivery, test strategy, test automation, technical interviews and pre-sales."
+      projects:
+        - name: "IDS Airnav"
+          domain:
+            it: "Aerospace"
+            en: "Aerospace"
+          label:
+            it: "Progetto principale Capgemini"
+            en: "Main project Capgemini"
+          description:
+            it: "Dashboard per il traffico aereo italiano con stream dati, microservizi e osservabilità."
+            en: "Dashboard for Italian air traffic with data streaming, microservices and observability."
+          highlights:
+            - it: "Progettazione e delivery di un microservizio Server-Sent Events con Kafka, Spring WebFlux, Keycloak, retry e riconnessione allo stream."
+              en: "Designed and delivered a Kafka-backed Server-Sent Events microservice with Spring WebFlux, Keycloak, retry and stream reconnection."
+            - it: "Definizione di test strategy multi-livello e automazione CI/CD con Cucumber, Gherkin, Citrus, Selenium e JMeter."
+              en: "Defined a multi-layer test strategy and CI/CD automation with Cucumber, Gherkin, Citrus, Selenium and JMeter."
+          technologies: ["Java", "Spring Boot", "Angular", "Kafka", "Server-Sent Events", "Spring WebFlux", "Keycloak", "Docker", "Kubernetes", "Azure DevOps", "PostgreSQL"]
+        - name: "Hitachi"
+          domain:
+            it: "Railway"
+            en: "Railway"
+          label:
+            it: "Altri progetti"
+            en: "Other projects"
+          description:
+            it: "Ticketing, documentazione SRS/SAS e decomposizione a microservizi."
+            en: "Ticketing, SRS/SAS documentation and microservices decomposition."
+          highlights: []
+          technologies: ["Java", "Microservices", "SRS", "SAS"]
+        - name: "AAROI"
+          pagination:
+            preferredBreakBefore: true
+          domain:
+            it: "Healthcare"
+            en: "Healthcare"
+          label:
+            it: "Altri progetti"
+            en: "Other projects"
+          description:
+            it: "Bug fixing e miglioramento funzionalità in contesto healthcare."
+            en: "Bug fixing and feature improvements in a healthcare context."
+          highlights: []
+          technologies: ["Java", "Spring"]
+        - name: "Terna"
+          domain:
+            it: "Energy"
+            en: "Energy"
+          label:
+            it: "Altri progetti"
+            en: "Other projects"
+          description:
+            it: "Validazione payload JSON e integrazione con sistemi esterni."
+            en: "JSON payload validation and integration with external systems."
+          highlights: []
+          technologies: ["Java", "JSON", "Integrations"]
+      technologies: ["Java", "Spring Boot", "Angular", "Kafka", "WebFlux", "Keycloak", "Docker", "Kubernetes"]
+
+    - id: "walgreens"
+      company: "Walgreens Boots Alliance"
+      role:
+        it: "Full Stack Developer"
+        en: "Full Stack Developer"
+      startDate: "2018-11"
+      endDate: "2021-10"
+      location:
+        it: "Napoli, Italia"
+        en: "Naples, Italy"
+      context:
+        it: "Piattaforme enterprise farmaceutiche basate su Java, Spring, Angular, microservizi e integrazioni event-driven."
+        en: "Enterprise pharmaceutical platforms based on Java, Spring, Angular, microservices and event-driven integrations."
+      highlights:
+        - it: "Contributo a piattaforme farmaceutiche internazionali basate su Java, Spring, Angular e integrazioni event-driven."
+          en: "Contributed to international pharmaceutical platforms built on Java, Spring, Angular and event-driven integrations."
+        - it: "Implementazione di sistemi event-driven con Kafka, Azure Service Bus, Inbox/Outbox e Claim Check, con supporto cloud, CI/CD e troubleshooting."
+          en: "Implemented event-driven systems with Kafka, Azure Service Bus, Inbox/Outbox and Claim Check, supporting cloud delivery, CI/CD and troubleshooting."
+      technologies: ["Java", "Spring Boot", "Angular", "Microservices", "Kafka", "Azure", "AWS", "Docker", "Kubernetes", "CI/CD"]
+
+  selectedProjectsTitle:
+    it: "Progetti selezionati"
+    en: "Selected Projects"
+
+  selectedProjects:
+    - name: "Lavami"
+      visible: true
+      role:
+        it: "Founder & Software Engineer"
+        en: "Founder & Software Engineer"
+      description:
+        it: "Iniziativa founder-led: piattaforma mobile/cloud per prenotazioni e operations car wash, progettata e sviluppata end-to-end con Flutter, Spring Boot e AWS."
+        en: "Founder-led initiative: mobile/cloud platform for car wash bookings and operations, designed and built end-to-end with Flutter, Spring Boot and AWS."
+      technologies: ["Flutter", "Java", "Spring Boot", "AWS"]
+    - name: "Workspace AI"
+      visible: true
+      description:
+        it: "Framework autonomo per orchestrare workflow AI multi-agente, code governance e automazione della Developer Experience."
+        en: "Self-directed framework for orchestrating multi-agent AI workflows, code governance and Developer Experience automation."
+      technologies: ["Java", "AI", "Automation", "Developer Experience"]
+    - name: "Planner"
+      visible: true
+      description:
+        it: "Gestionale progettato autonomamente per studi dentistici, con gestione appuntamenti, pazienti e organizzazione operativa."
+        en: "Self-designed management system for dental practices, covering appointments, patients and operational organization."
+      technologies: ["Angular", "NestJS"]
+
+  certifications:
+    - name: "AWS Certified Cloud Practitioner"
+      issuer: "Amazon Web Services"
+      date: "2022/08"
+
+  education:
+    - title:
+        it: "Perito Informatico"
+        en: "Computer Science Technical Diploma"
+      institution: "I.T.I.S. Enrico Medi"
+      startDate: "2011"
+      endDate: "2016"
+      details: "80/100"
+
+  languages:
+    - name:
+        it: "Italiano"
+        en: "Italian"
+      level:
+        it: "madrelingua"
+        en: "native"
+    - name:
+        it: "Inglese"
+        en: "English"
+      level:
+        it: "B2"
+        en: "B2"
+
+  additionalTrainingTitle:
+    it: "Formazione continua"
+    en: "Continuous Learning"
+
+  additionalTraining:
+    - name: "Flutter & Dart - The Complete Guide"
+      issuer: "Udemy"
+      date: "2022"
+      visibleByDefault: true
+    - name: "Social Media Marketing - Corso Completo"
+      issuer: "Udemy"
+      date: "2020"
+      visibleByDefault: true

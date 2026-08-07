@@ -1,0 +1,38 @@
+coverLetter:
+  generic:
+    subject:
+      it: "Candidatura per il ruolo di Senior Software Engineer"
+      en: "Application for the Senior Software Engineer role"
+    opening:
+      it: >
+        Le scrivo per presentare la mia candidatura per opportunità backend Java in contesti enterprise,
+        dove qualità tecnica, ownership e collaborazione con stakeholder sono centrali.
+      en: >
+        I am writing to apply for Java backend engineering opportunities in enterprise contexts where
+        technical quality, ownership and stakeholder collaboration are central.
+    professionalValue:
+      it: >
+        Negli ultimi anni ho lavorato su piattaforme sanitarie, farmaceutiche, aerospaziali ed energetiche,
+        contribuendo a microservizi, sistemi event-driven, test automation, CI/CD e troubleshooting in produzione.
+      en: >
+        Over the past several years I have worked on healthcare, pharmaceutical, aerospace and energy platforms,
+        contributing to microservices, event-driven systems, test automation, CI/CD and production troubleshooting.
+    concreteExperience:
+      it: >
+        Porto un approccio pragmatico: analizzo il requisito, individuo i rischi tecnici, costruisco soluzioni
+        manutenibili e aiuto il team a rendere esplicite le decisioni architetturali.
+      en: >
+        I bring a pragmatic approach: I analyze requirements, identify technical risks, build maintainable
+        solutions and help the team make architectural decisions explicit.
+    motivation:
+      it: >
+        Cerco contesti in cui poter contribuire con esperienza backend solida, sensibilità verso il prodotto
+        e capacità di dialogare con technical leader, team e clienti.
+      en: >
+        I am looking for environments where I can contribute solid backend experience, product awareness
+        and the ability to work with technical leaders, teams and clients.
+    closing:
+      it: >
+        Resto a disposizione per un colloquio e per approfondire come la mia esperienza possa contribuire al ruolo.
+      en: >
+        I would welcome the opportunity to discuss how my experience could contribute to the role.

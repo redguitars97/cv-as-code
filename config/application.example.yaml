@@ -1,0 +1,31 @@
+application:
+  id: "example-company"
+  company: "Example Company"
+  role:
+    it: "Senior Software Engineer"
+    en: "Senior Software Engineer"
+  recipient:
+    it: "Team di selezione"
+    en: "Hiring Team"
+  jobReference: "Example reference"
+  companyLocation: "Remote / Italy"
+  applicationDate: "2026-08-05"
+motivation:
+  companyReason:
+    it: "l'attenzione a software enterprise affidabile e qualità di lungo periodo"
+    en: "the focus on reliable enterprise software and long-term product quality"
+  roleReason:
+    it: "l'opportunità di contribuire a sistemi backend Java con ownership tecnica chiara"
+    en: "the opportunity to contribute to Java backend systems with clear technical ownership"
+  matchingPoints:
+    - it: "sviluppo backend Java e Spring"
+      en: "Java and Spring backend development"
+    - it: "microservizi e sistemi distribuiti"
+      en: "microservices and distributed systems"
+    - it: "Kafka e integrazioni event-driven"
+      en: "Kafka and event-driven integrations"
+    - it: "Docker, Kubernetes, CI/CD e troubleshooting in produzione"
+      en: "Docker, Kubernetes, CI/CD and production troubleshooting"
+  closingNote:
+    it: "Sarei lieto di approfondire come questa esperienza possa supportare il team."
+    en: "I would be glad to discuss how this background can support the team."

@@ -1,0 +1,12 @@
+candidate:
+  firstName: "Name"
+  lastName: "Surname"
+  location:
+    it: "Citta, Paese"
+    en: "City, Country"
+  professionalTitle:
+    it: "Senior Software Engineer"
+    en: "Senior Software Engineer"
+  positioning:
+    it: "Enterprise Backend | Java | Microservizi | Cloud | Developer Experience"
+    en: "Enterprise Backend | Java | Microservices | Cloud | Developer Experience"
