@@ -45,8 +45,8 @@ resume:
       highlights:
         - it: "Ownership di funzionalità backend Java/Spring per piattaforme sanitarie enterprise, integrando domini clinici, PostgreSQL, BFF e interoperabilità FHIR R4."
           en: "Owned Java/Spring backend features for enterprise healthcare platforms, integrating clinical domains, PostgreSQL, BFF services and FHIR R4 interoperability."
-        - it: "Contributo ad analisi requisiti, decisioni architetturali Ports/Adapters, librerie condivise, mentoring, CI/CD e troubleshooting con trace ID/ELK."
-          en: "Contributed to requirements analysis, Ports/Adapters architectural decisions, shared libraries, mentoring, CI/CD and troubleshooting with trace IDs/ELK."
+        - it: "Contributo ad analisi requisiti, decisioni Ports/Adapters, librerie condivise, supporto team, demo cliente, CI/CD e troubleshooting trace ID/ELK."
+          en: "Contributed to requirements analysis, Ports/Adapters decisions, shared libraries, team support, client demos, CI/CD and trace ID/ELK troubleshooting."
       technologies: ["Java", "Spring Boot", "PostgreSQL", "BFF", "GitLab CI/CD", "Docker", "Kubernetes", "ELK", "FHIR R4"]
 
     - id: "capgemini"
@@ -138,11 +138,11 @@ resume:
         it: "Piattaforme enterprise farmaceutiche basate su Java, Spring, Angular, microservizi e integrazioni event-driven."
         en: "Enterprise pharmaceutical platforms based on Java, Spring, Angular, microservices and event-driven integrations."
       highlights:
-        - it: "Contributo a piattaforme farmaceutiche internazionali basate su Java, Spring, Angular e integrazioni event-driven."
-          en: "Contributed to international pharmaceutical platforms built on Java, Spring, Angular and event-driven integrations."
-        - it: "Implementazione di sistemi event-driven con Kafka, Azure Service Bus, Inbox/Outbox e Claim Check, con supporto cloud, CI/CD e troubleshooting."
-          en: "Implemented event-driven systems with Kafka, Azure Service Bus, Inbox/Outbox and Claim Check, supporting cloud delivery, CI/CD and troubleshooting."
-      technologies: ["Java", "Spring Boot", "Angular", "Microservices", "Kafka", "Azure", "AWS", "Docker", "Kubernetes", "CI/CD"]
+        - it: "Contributo a piattaforme farmaceutiche internazionali con Java, Spring, Angular, analisi requisiti, supporto TL e demo cliente USA in Agile/Scrum."
+          en: "Contributed to international pharmaceutical platforms with Java, Spring, Angular, requirements analysis, TL support and US client demos in Agile/Scrum."
+        - it: "Implementazione di sistemi event-driven con Kafka, Azure Service Bus, Inbox/Outbox e Claim Check, testing API/eventi, supporto cloud, CI/CD e troubleshooting."
+          en: "Implemented event-driven systems with Kafka, Azure Service Bus, Inbox/Outbox and Claim Check, API/event testing, cloud support, CI/CD and troubleshooting."
+      technologies: ["Java", "Spring Boot", "Angular", "Microservices", "Kafka", "Azure Service Bus", "Inbox/Outbox", "Claim Check", "Azure", "AWS", "Docker", "Kubernetes", "CI/CD"]
 
   selectedProjectsTitle:
     it: "Progetti selezionati"
